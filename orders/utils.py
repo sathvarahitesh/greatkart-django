@@ -3,7 +3,6 @@ from reportlab.lib.styles import getSampleStyleSheet
 from io import BytesIO
 
 def generate_invoice_pdf(order):
-
     buffer = BytesIO()
     doc = SimpleDocTemplate(buffer)
 
@@ -24,5 +23,4 @@ def generate_invoice_pdf(order):
 
     pdf = buffer.getvalue()
     buffer.close()
-
     return pdf
